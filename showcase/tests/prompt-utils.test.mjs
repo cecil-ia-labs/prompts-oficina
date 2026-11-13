@@ -34,3 +34,8 @@ test('optional context is separate and cannot rewrite original instructions',()=
  assert.match(text,/Disciplina \/ tema: Biologia/);
  assert.match(text,/PROMPT ORIGINAL \(INALTERADO\)/);
 });
+
+test('preserves exact whitespace inside the original fenced block',()=>{
+ const md='## Prompt para copiar\n\n```text\n  Keep leading and trailing spaces.  \n```';
+ assert.equal(extractPrompt(md),'  Keep leading and trailing spaces.  ');
+});
