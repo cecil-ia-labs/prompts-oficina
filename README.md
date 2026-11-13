@@ -1,47 +1,56 @@
-# Prompts Oficina
+# Prompts Oficina — educational prompt library
 
-Biblioteca pública em português para professores e estudantes universitários copiarem, baixarem e usarem nos seus próprios chats e modelos.
+**Languages:** **English (default)** · [Português (Brasil)](README.pt-BR.md) · [Italiano](README.it.md)
 
-## Comece aqui
+**[Explore the Teaching Prompt Studio](https://cecil-ia-labs.github.io/prompts-oficina/)** · [Original Portuguese prompts](prompts/README.md) · [Source](https://github.com/cecil-ia-labs/prompts-oficina)
 
-- [Escolher entre dez prompts educacionais](prompts/README.md)
-- [Baixar ou copiar todos os prompts em texto simples](prompts/PROMPTS_COMPLETOS.txt)
-- [Aprender a enviar anexos e usar alternativas de formato](prompts/COMO_USAR.md)
-- [Personalizar o ChatGPT para o trabalho docente](personalizacao/README.md)
+A public collection of **ten independent prompts in Brazilian Portuguese** for university teachers, students and early-career researchers. The library was prepared for the workshop of **28 October 2026**, and does not depend on the private demonstration environment or materials from earlier conversations.
 
-## O que está disponível
+The standalone showroom offers searching, filters by audience and subject, a verbatim preview of each original prompt, and copy/download controls. Optional user context can be prepended separately without rewriting any original instructions.
 
-| Material | Resultado |
-| --- | --- |
-| [Plano de aula → apresentação e exercícios](prompts/01-plano-de-aula-apresentacao-e-exercicios.md) | Slides, lista do estudante e gabarito separado; Google Docs quando disponível e alternativas |
-| [Revisão de texto](prompts/02-revisao-gramatical-sintatica-e-logica.md) | Gramática, sintaxe, clareza e coerência lógica |
-| [Zenodo sem GitHub](prompts/03-publicar-artigo-no-zenodo-sem-github.md) | Guia didático pelo navegador, com cadastro, metadados, DOI e revisão prévia |
-| [Miniapp conceitual](prompts/04-miniapp-interativo-conceitual.md) | Execução no chat quando suportada e HTML exportável |
-| [Outros seis prompts](prompts/README.md) | Tutoria, leitura crítica, estudos, rubricas, busca bibliográfica e acessibilidade |
-| [Instruções genéricas para o ChatGPT](personalizacao/README.md) | Respostas proporcionais à intenção e à complexidade; uso pertinente de listas, citações, miniapps, blueprints e imagens |
+**No AI model is executed on the website.** Visitors transfer the chosen prompt to their own chat or local model, then supply the needed files and information there.
 
-## Usar e baixar
+## The ten original prompts
 
-1. Abra um prompt e copie o bloco indicado.
-2. Preencha os campos e anexe ou cole seus materiais **nessa mesma conversa**.
-3. Revise a resposta antes de usar em aula ou em um trabalho.
+| # | Prompt | Main purpose |
+| --- | --- | --- |
+| 01 | [Lesson plan → presentation and exercises](prompts/01-plano-de-aula-apresentacao-e-exercicios.md) | Slides, student exercises and separate teacher answer key |
+| 02 | [Grammar, syntax and argument review](prompts/02-revisao-gramatical-sintatica-e-logica.md) | Improve text while respecting original authorship and meaning |
+| 03 | [Publish a paper on Zenodo without GitHub](prompts/03-publicar-artigo-no-zenodo-sem-github.md) | Browser-only deposit guidance and metadata checklist |
+| 04 | [Interactive concept miniapp](prompts/04-miniapp-interativo-conceitual.md) | Interactive educational experience and standalone HTML |
+| 05 | [Socratic tutor](prompts/05-tutor-socratico.md) | Progressive questions, hints and feedback |
+| 06 | [Critical reading of an article](prompts/06-leitura-critica-de-artigo.md) | Traceable reading notes and evidence appraisal |
+| 07 | [Active-recall study plan](prompts/07-plano-de-estudos-e-recuperacao-ativa.md) | Realistic study schedule and retrieval practice |
+| 08 | [Rubric and formative feedback](prompts/08-rubrica-e-feedback-formativo.md) | Observable assessment criteria and constructive feedback |
+| 09 | [Verifiable literature search](prompts/09-busca-bibliografica-verificavel.md) | Reproducible search terms and selection criteria |
+| 10 | [Accessible learning materials](prompts/10-adaptar-material-para-acessibilidade.md) | Improve clarity and access without losing rigor |
 
-Para baixar a biblioteca inteira, use **Code → Download ZIP** no GitHub. Para um arquivo individual, abra-o e use o botão de download ou **Raw** e salve. Não é necessário instalar a aplicação AI Teaching Studio nem configurar uma chave de API.
+The links are to the **authoritative Portuguese Markdown documents**. Translated overviews are not translations of the ten prompts themselves.
 
-Os prompts são independentes dos recursos da demo: não exigem acesso ao Drive da oficina, a chats anteriores ou a arquivos privados. Google Docs, navegação, geração de imagens e execução de miniapps dependem das ferramentas disponíveis no chat de quem os utiliza; cada roteiro prevê alternativas.
+## How to use
 
-## QR code do repositório
+Choose an item in the [catalogue](prompts/README.md), copy its *Prompt para copiar* fenced text block, fill the original bracketed fields, and provide its requested materials **in the same chat** as the prompt. Review results, sources, privacy and attribution before using them in class or research.
 
-![QR code para https://github.com/cecil-ia-labs/prompts-oficina](assets/qr-prompts-oficina.png)
+The [complete usage guide](prompts/COMO_USAR.md) offers alternatives where Google Docs, Google Slides, browsing, file generation or live miniapps are unavailable.
 
-- [Baixar PNG](assets/qr-prompts-oficina.png)
-- [Baixar SVG para impressão](assets/qr-prompts-oficina.svg)
-- Destino: https://github.com/cecil-ia-labs/prompts-oficina
+[Download all prompts as plain text](prompts/PROMPTS_COMPLETOS.txt) · [Personalization instructions](personalizacao/README.md)
 
-O QR aponta diretamente para este repositório, sem encurtador ou serviço intermediário. Para projetar ou imprimir, preserve a margem branca e não deforme a imagem.
+## Run the local showroom
 
-## Origem e alcance
+The static SPA in `showcase/` loads only public Markdown assets from the same origin. It does not upload files, accept API keys, or invoke an AI provider.
 
-Biblioteca preparada para a oficina de 28/10/2026. Esta cópia pública contém apenas os prompts independentes, instruções de uso, personalização e QR code; a aplicação e os materiais privados da demo ficam no projeto de origem.
+```sh
+python3 -m http.server 8000 --bind 127.0.0.1
+# Open http://127.0.0.1:8000/showcase/
+node --test showcase/tests/*.test.mjs
+```
 
-As instruções são propostas reutilizáveis. Não comprovam uma consulta, execução, arquivo criado ou publicação acadêmica: essas ações precisam acontecer no ambiente de quem usa o material. Fontes, autoria e decisões pedagógicas devem ser revisadas pelo responsável.
+Pages publication is available only by manual `workflow_dispatch` in `.github/workflows/publish-showcase.yml`; the site is not automatically deployed on push.
+
+Development conventions: [AGENTS.md](AGENTS.md), [project skills](.agents/skills/), [showroom documentation](showcase/README.md).
+
+## Scope and reuse
+
+These are independent educational instructions, not installed automations. A model's output depends on the real attachments and tools available in the user's own environment. The publisher does not claim that the instructions were executed, that files were produced, or that a research article was deposited.
+
+**Licensing note:** No root `LICENSE` file is currently present. Public visibility is not itself permission for open-source reuse; the maintainer should select and document appropriate license terms.
