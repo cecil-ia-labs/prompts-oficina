@@ -6,7 +6,7 @@ const originalMarkdown=new Map();
 const originalPrompt=new Map();
 const state={selected:'01',search:'',category:'Todos',audience:'Todos',fullDocument:false};
 let toastTimer;
-const basename=prompt=>'./prompts/'+prompt.file;
+const basename=prompt=>(new URL(import.meta.url).pathname.endsWith('/showcase/studio.mjs')?'../prompts/':'./prompts/')+prompt.file;
 const node=(tag,cls,text)=>{const el=document.createElement(tag);if(cls)el.className=cls;if(text!==undefined)el.textContent=String(text);return el};
 function message(text){
  const t=$('toast');clearTimeout(toastTimer);t.textContent=text;t.hidden=false;toastTimer=setTimeout(()=>t.hidden=true,4000);
