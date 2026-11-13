@@ -4,7 +4,7 @@ This static SPA presents the ten Portuguese educational prompts **verbatim**. It
 
 ## Source preservation
 
-The authoritative text lives in `prompts/01-*.md` through `prompts/10-*.md`. Each has exactly one ```text``` fenced section headed **Prompt para copiar**. `showcase/prompt-utils.mjs` extracts that block and preserves it exactly (apart from trimming outer blank lines). The list metadata in `showcase/manifest.mjs` is a derived editorial index; it must never replace the source.
+The authoritative text lives in `prompts/01-*.md` through `prompts/10-*.md`. Each has exactly one ```text``` fenced section headed **Prompt para copiar**. `showcase/prompt-utils.mjs` extracts that block and preserves it exactly (including its original whitespace). The list metadata in `showcase/manifest.mjs` is a derived editorial index; it must never replace the source.
 
 The optional customization form adds a separate block of user context. It **does not fill bracketed placeholders** in the original or alter its instructions. Visitors should still inspect and fill the original fields as needed.
 
