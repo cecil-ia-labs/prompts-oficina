@@ -41,3 +41,9 @@ test('manual workflow pins all actions and includes unchanged prompt sources',()
  assert.ok(refs.length>=4);
  for(const [,name,sha] of refs){assert.match(name,/^actions\//);assert.match(sha,/^[a-f0-9]{40}$/);}
 });
+
+test('resolves original source paths in both repository and published Pages layouts',()=>{
+ assert.match(js,/endsWith\('\/showcase\/studio\.mjs'\)/);
+ assert.match(js,/\.\.\/prompts\//);
+ assert.match(js,/\.\/prompts\//);
+});
