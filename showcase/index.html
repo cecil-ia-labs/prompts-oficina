@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Prompts Oficina · Teaching Prompt Studio | Cecil-IA Labs</title>
+<meta name="description" content="Dez prompts educacionais gratuitos para docentes e estudantes: pesquise, leia, personalize, copie e baixe os textos originais em português.">
+<meta name="theme-color" content="#fffaf0">
+<link rel="canonical" href="https://cecil-ia-labs.github.io/prompts-oficina/">
+<meta property="og:type" content="website"><meta property="og:title" content="Prompts Oficina — Teaching Prompt Studio">
+<meta property="og:description" content="Uma biblioteca interativa de dez prompts didáticos independentes para ensino, pesquisa e aprendizagem.">
+<meta property="og:url" content="https://cecil-ia-labs.github.io/prompts-oficina/">
+<link rel="stylesheet" href="./studio.css"><script type="module" src="./studio.mjs"></script>
+</head>
+<body>
+<a class="skip" href="#catalogo">Ir para o catálogo de prompts</a>
+<header class="site-nav shell">
+ <a class="brand" href="https://cecil-ia-labs.github.io/"><span class="brand-symbol">✳</span><span>CECIL/IA <small>TEACHING LAB</small></span></a>
+ <nav aria-label="Navegação principal"><a href="#catalogo">Catálogo</a><a href="#como-usar">Como usar</a><a href="#materiais">Materiais</a></nav>
+ <a class="github" href="https://github.com/cecil-ia-labs/prompts-oficina">REPOSITÓRIO ↗</a>
+</header>
+<main>
+<section class="hero shell">
+ <div class="hero-copy"><p class="eyebrow">BIBLIOTECA ABERTA · RECURSOS EDUCACIONAIS</p><h1>Ensinar começa<br>com <em>boas</em><br>perguntas<span>.</span></h1>
+  <p>Dez prompts independentes para planejar aulas, estudar, revisar textos, pesquisar e criar experiências de aprendizagem. Escolha, adapte e leve para o modelo que você já usa.</p>
+  <div class="hero-actions"><a class="primary-action" href="#catalogo">Explorar os dez prompts ↘</a><a class="secondary-action" href="https://github.com/cecil-ia-labs/prompts-oficina/tree/main/prompts">Ver textos originais ↗</a></div>
+  <div class="hero-notes"><span><b>10</b> propostas completas</span><span><b>0</b> chaves de API necessárias</span><span><b>100%</b> conteúdo consultável</span></div>
+ </div>
+ <div class="hero-art" aria-hidden="true">
+   <div class="sticker sticker-a">ENSINO <strong>✳</strong></div><div class="sticker sticker-b">PESQUISA <strong>↗</strong></div>
+   <div class="card-art"><div class="card-art-header"><span>OFICINA / PROMPT Nº 04</span><b>✦</b></div><div class="card-art-main">E se aprender<br>fosse também<br><i>explorar?</i></div><div class="card-art-footer"><span>CONCEITO ↗ MINIAPP</span><span class="dot-row">● ● ●</span></div></div>
+   <span class="art-plus plus-a">✳</span><span class="art-plus plus-b">✳</span>
+ </div>
+</section>
+<section class="intro-band"><div class="shell"><p>UMA OFICINA, MUITOS CAMINHOS</p><div><span>PLANEJAMENTO</span><span>ESCRITA</span><span>PESQUISA</span><span>CRIAÇÃO</span><span>APRENDIZAGEM</span><span>AVALIAÇÃO</span><span>ACESSIBILIDADE</span></div></div></section>
+<section class="catalog-section shell" id="catalogo">
+ <p class="eyebrow">01 / BIBLIOTECA INTERATIVA</p><div class="section-heading"><h2>Encontre seu<br><em>próximo ponto de partida.</em></h2><p>Pesquise por objetivo, área ou palavra do texto original. Ao selecionar um item, você vê o prompt real publicado no repositório — sem geração automática ou reescrita oculta.</p></div>
+ <div class="workbench">
+  <div class="workbench-top">
+   <label class="search-box" for="catalog-search"><span aria-hidden="true">⌕</span><input id="catalog-search" type="search" placeholder="Buscar: plano de aula, Zenodo, acessibilidade..." autocomplete="off"><kbd>/</kbd></label>
+   <div class="workbench-count"><span id="result-count">10</span> PROMPTS</div>
+  </div>
+  <div class="filter-bar"><div><label for="category-select">ÁREA</label><select id="category-select"><option value="Todos">Todas as áreas</option></select></div><div><label for="audience-select">PARA QUEM</label><select id="audience-select"><option value="Todos">Todo o público</option><option value="Docentes">Docentes</option><option value="Estudantes">Estudantes</option></select></div><button id="clear-filters" type="button">Limpar filtros ↺</button></div>
+  <div class="workbench-body">
+   <section class="prompt-list-panel" aria-label="Lista de prompts"><div class="panel-head"><strong>ESCOLHA UM PROMPT</strong><span>01—10</span></div><div class="prompt-list" id="prompt-list" aria-live="polite"></div></section>
+   <section class="prompt-detail-panel" aria-label="Prompt selecionado">
+    <div id="detail-empty" class="detail-empty">Selecione um prompt na lista para visualizar o texto original.</div>
+    <div id="detail-content" hidden>
+     <div class="detail-heading"><div><p class="eyebrow" id="detail-category">PLANEJAMENTO</p><h3 id="detail-title">Plano de aula</h3><p id="detail-description"></p></div><span id="detail-number" class="detail-number">01/10</span></div>
+     <div class="meta-facts"><div><span>PARA QUEM</span><strong id="detail-audience">Docentes</strong></div><div><span>VOCÊ ENVIA</span><strong id="detail-needs">Plano de aula</strong></div><div><span>VOCÊ RECEBE</span><strong id="detail-delivers">Apresentação</strong></div></div>
+     <div class="preview-head"><span>TEXTO ORIGINAL · PROMPT PARA COPIAR</span><div><button id="show-original" type="button" aria-pressed="false">Ver documento completo</button><a id="original-link" href="https://github.com/cecil-ia-labs/prompts-oficina/tree/main/prompts" target="_blank" rel="noopener noreferrer">GitHub ↗</a></div></div>
+     <pre class="prompt-preview"><code id="prompt-code">Carregando texto…</code></pre>
+     <details class="customize" id="context-details"><summary>+ Adicionar contexto pessoal (opcional)</summary><p>Essas informações serão colocadas antes do prompt, em um bloco identificado. <b>O texto original permanece inalterado.</b> Confira também os campos entre colchetes do próprio roteiro.</p>
+      <div class="custom-fields"><label>Disciplina ou tema<input id="context-theme" type="text" maxlength="180" placeholder="Ex.: Genética molecular"></label><label>Público ou turma<input id="context-audience" type="text" maxlength="180" placeholder="Ex.: 2º semestre"></label><label>Objetivo<input id="context-goal" type="text" maxlength="240" placeholder="Ex.: Preparar um seminário"></label><label>Restrições / preferências<input id="context-constraints" type="text" maxlength="240" placeholder="Ex.: 45 minutos; linguagem acessível"></label></div>
+     </details>
+     <div class="detail-actions"><button id="copy-prompt" class="copy-main" type="button" disabled>Copiar prompt ↗</button><button id="download-prompt" type="button" disabled>Baixar .txt ↓</button><button id="download-markdown" type="button" disabled>Baixar original .md ↓</button></div>
+     <p class="detail-tip">Anexe os materiais na <b>mesma conversa</b> em que usar o prompt. Confira o resultado antes de aplicar em aula ou publicar.</p>
+    </div>
+   </section>
+  </div>
+ </div>
+ <div class="catalog-footnote"><span>✱</span><p>Biblioteca editorial, não um executor de IA: o site não solicita chave de API, não envia seus materiais a modelos e não cria documentos automaticamente. Google Docs, apresentações e miniapps dependem das ferramentas disponíveis no chat escolhido.</p></div>
+</section>
+<section class="how-section" id="como-usar"><div class="shell"><p class="eyebrow">02 / COMO USAR</p><div class="section-heading"><h2>Copiar é fácil.<br><em>Usar bem exige contexto.</em></h2><p>O valor do prompt está no diálogo entre seus objetivos, os materiais da disciplina e as capacidades do modelo disponível.</p></div><div class="how-grid">
+ <article><span>01</span><h3>Escolha o objetivo</h3><p>Use as categorias e a busca para encontrar uma proposta pedagógica específica. Leia as entradas e o resultado esperado.</p></article>
+ <article><span>02</span><h3>Adapte e forneça fontes</h3><p>Complete os campos entre colchetes e anexe ou cole o material necessário no mesmo chat. Não presuma acesso a arquivos privados.</p></article>
+ <article><span>03</span><h3>Execute e revise</h3><p>Cole o prompt no seu modelo, avalie a resposta, confira fontes e ajuste o resultado para a turma antes de utilizá-lo.</p></article>
+ </div></div></section>
+<section class="resources-section shell" id="materiais"><p class="eyebrow">03 / MATERIAL DE APOIO</p><div class="section-heading"><h2>Além do<br><em>prompt.</em></h2><p>Todos os recursos permanecem disponíveis como documentos independentes, sem depender do antigo ambiente da oficina ou de um chat específico.</p></div>
+ <div class="resource-grid"><a href="https://github.com/cecil-ia-labs/prompts-oficina/blob/main/prompts/COMO_USAR.md"><span>GUIA</span><h3>Como usar</h3><p>Anexos, limites das ferramentas e alternativas de formatos.</p><strong>Ler instruções ↗</strong></a>
+ <a href="./prompts/PROMPTS_COMPLETOS.txt" download><span>ARQUIVO</span><h3>Todos os prompts</h3><p>Baixe a biblioteca completa em um arquivo de texto.</p><strong>Baixar TXT ↓</strong></a>
+ <a href="https://github.com/cecil-ia-labs/prompts-oficina/tree/main/personalizacao"><span>PERSONALIZAÇÃO</span><h3>Configure seu chat</h3><p>Perfil docente e instruções de estilo para o ChatGPT.</p><strong>Abrir no GitHub ↗</strong></a></div>
+</section>
+</main>
+<footer class="site-footer shell"><a href="https://cecil-ia-labs.github.io/">← CECIL-IA LABS</a><span>PROMPTS OFICINA · EDIÇÃO INDEPENDENTE · 2026</span><a href="https://github.com/cecil-ia-labs/prompts-oficina">CÓDIGO E TEXTOS ↗</a></footer>
+<p id="toast" class="toast" role="status" aria-live="polite" hidden></p>
+</body></html>
