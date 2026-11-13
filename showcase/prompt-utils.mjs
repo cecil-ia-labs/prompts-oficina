@@ -3,7 +3,7 @@ export function extractPrompt(markdown) {
   if(typeof markdown!=='string')throw new TypeError('Expected Markdown text');
   const match=markdown.match(/(?:^|\n)```text[ \t]*\r?\n([\s\S]*?)\r?\n```(?:\r?\n|$)/);
   if(!match||!match[1].trim())throw new Error('Original prompt block not found');
-  return match[1].trim();
+  return match[1];
 }
 export function normalizeForSearch(text) {
   return String(text).toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'');
